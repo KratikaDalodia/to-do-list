@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List App</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✓</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div class="splash-screen" id="splashScreen">
+        <div class="splash-logo">✓</div>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+        <button class="theme-toggle" id="themeToggle">🌙</button>
+        <div class="header-content">
+            <h1>My To-Do List</h1>
+            <p class="subtitle">Stay organized and productive</p>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="todo-card">
+            <!-- Input Section -->
+            <div class="input-section">
+                <div class="input-container">
+                    <input type="text" class="task-input" id="taskInput" placeholder="What needs to be done?" maxlength="200">
+                    <button class="add-btn" id="addBtn">Add Task</button>
+                </div>
+                <div class="controls-row">
+                    <select class="priority-select" id="prioritySelect">
+                        <option value="low">Low Priority</option>
+                        <option value="medium">Medium Priority</option>
+                        <option value="high">High Priority</option>
+                    </select>
+                    <input type="date" class="due-date" id="dueDate">
+                </div>
+            </div>
+
+            <!-- Filter Section -->
+            <div class="filter-section">
+                <div class="filter-controls">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="active">Active</button>
+                        <button class="filter-btn" data-filter="completed">Completed</button>
+                    </div>
+                    <div class="task-counter" id="taskCounter">0 tasks remaining</div>
+                    <button class="clear-completed" id="clearCompleted">Clear Completed</button>
+                </div>
+            </div>
+
+            <!-- Task List -->
+            <div class="task-list" id="taskList">
+                <div class="empty-state">
+                    <div class="empty-icon">📝</div>
+                    <p>No tasks yet. Add one above to get started!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
